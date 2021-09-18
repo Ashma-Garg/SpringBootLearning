@@ -1,18 +1,14 @@
-package com.example.demo.otherClass;
+package com.example.demo.dao;
 
-import org.springframework.stereotype.Component;
-
-@Component
-public class Alien {
-	
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
+public class AlienInterface {
+	@Id
 	private int id;
 	private String first_name;
 	private String last_name;
 	private String address;
-	public Alien() {
-		super();
-		System.out.println("Alien constructor");
-	}
 	public int getId() {
 		return id;
 	}
@@ -37,12 +33,5 @@ public class Alien {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public void show() {
-		System.out.println("Entered in Alien");
-	}
-	@Override
-	public String toString() {
-		return "Alien [id=" + id + ", first_name=" + first_name + ", last_name=" + last_name + ", address=" + address
-				+ "]";
-	}
+	
 }
